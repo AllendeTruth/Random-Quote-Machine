@@ -30,6 +30,9 @@ function getQuote(){
 function displayQuote(quote){
     var quotetext = document.querySelector(".quotebox__content");
     quotetext.textContent = quote;
+
+    var tweet = document.querySelector(".button__tweet");
+    tweet.setAttribute('href', `https://twitter.com/intent/tweet?text=${quote} - Donald Trump`);
 }
 function displaySource(){
     var sourcetext = document.querySelector(".quotebox__source");
