@@ -21,14 +21,9 @@ function getQuote(){
         });
     // console.log("newquote button was clicked");
 };
-// select id's   .button__newquote  .quotebox__content #quote-source
 function displayQuote(quote){
     var quotetext = document.querySelector(".quotebox__content");
     quotetext.textContent = quote;
 }
 var newQuoteButton= document.querySelector(".button__newquote");
 newQuoteButton.addEventListener('click', getQuote);
-//add event listener
-
-
-//display text
