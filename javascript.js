@@ -8,7 +8,10 @@ function getQuote(){
     fetch(api)
         // .then() converts resons to json
         .then(function(response){
-            response.json();
+            return response.json();
+        })
+        .then(function(data){
+            console.log(data);
         })
     // console.log("newquote button was clicked");
 };
