@@ -16,6 +16,12 @@ function getQuote(){
             //calling function displayQuote(data.message) inserts text in content area
             displayQuote(data.message);
         })
+        .then(function(){
+            //data from response displays message property that has quote;
+            //data.message displays just quote.
+            //calling function displayQuote(data.message) inserts text in content area
+            displaySource();
+        })
         .catch(function(){
             console.log("Error");
         });
@@ -24,6 +30,10 @@ function getQuote(){
 function displayQuote(quote){
     var quotetext = document.querySelector(".quotebox__content");
     quotetext.textContent = quote;
+}
+function displaySource(){
+    var sourcetext = document.querySelector(".quotebox__source");
+    sourcetext.textContent = "- Donald J Trump";
 }
 var newQuoteButton= document.querySelector(".button__newquote");
 newQuoteButton.addEventListener('click', getQuote);
