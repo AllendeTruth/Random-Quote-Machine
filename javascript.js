@@ -13,6 +13,9 @@ function getQuote(){
         .then(function(data){
             console.log(data);
         })
+        .catch(function(){
+            console.log("Error");
+        })
     // console.log("newquote button was clicked");
 };
 // select id's   .button__newquote  .quotebox__content #quote-source
