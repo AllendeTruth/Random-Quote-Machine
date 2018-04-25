@@ -6,16 +6,19 @@ var api = "https://api.whatdoestrumpthink.com/api/v1/quotes/random";
 function getQuote(){
     // fetch gets URL;
     fetch(api)
-        // .then() converts resons to json
+        // .then() converts resonds to json
         .then(function(response){
             return response.json();
         })
         .then(function(data){
-            console.log(data);
+            //data from response displays message property that has quote;
+            //data.message displays just quote.
+            //calling function displayQuote(data.message) inserts text in content area
+            displayQuote(data.message);
         })
         .catch(function(){
             console.log("Error");
-        })
+        });
     // console.log("newquote button was clicked");
 };
 // select id's   .button__newquote  .quotebox__content #quote-source
